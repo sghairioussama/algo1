@@ -1,0 +1,55 @@
+ALGORITHM nb_of_caracteres
+
+VAR
+
+  str:STRING :="try to be active";
+ count:INTEGER:= 0 ;
+
+BEGIN
+    FOR (int i = 0; i < string.length(); i++) 
+
+            if( string.charAt(i)= ' ')  
+
+                count++;  
+         END_IF
+ END_FOR
+END
+
+
+
+ALGORITHM nb_words
+VAR
+ str:STRING :="try to be active";
+ count:INTEGER:= 1 ;
+
+BEGIN
+    FOR i in str DO 
+    IF (i=="") THEN
+        count=count+1 ;
+    END_IF
+   
+    END_FOR
+END
+
+
+
+
+
+ALGORITHM nb_vowelle
+
+VAR
+ str:STRING :="try to be active";
+
+ count:INTEGER:= 0 ;
+
+BEGIN
+
+FOR (int i=0 ; i<str.length(); i++)
+         char ch = str.charAt(i);
+         IF (ch == 'a'|| ch == 'e'|| ch == 'i' ||ch == 'o' ||ch == 'u'||ch == 'y') THEN
+        
+            count=count+1 ;
+        END_IF
+END_FOR
+write(count)
+ END
